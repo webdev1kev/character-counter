@@ -14,15 +14,98 @@
   </head>
   <body>
     <header>
-      <nav>
-        <img src="public/Logo White.svg" />
-        <button>
+      <nav class="navbar">
+        <img class="logo" src="public/Logo White.svg" />
+        <button class="mode-toggle">
           <img src="public/sun.svg" />
         </button>
       </nav>
     </header>
     <main>
-      <h1 class="title text-1-mobile">Analyze your text in real-time.</h1>
+      <h1 class="title text-1">Analyze your text in real-time.</h1>
+      <div class="inputs-box">
+        <textarea
+          class="text-3"
+          id="user-text-input"
+          placeholder="Start typing here… (or paste your text)"
+        ></textarea>
+        <div class="toggles-box">
+          <div class="check-inputs">
+            <button
+              class="check-input"
+              data-checked="false"
+              id="exclude-spaces"
+            >
+              <div class="checkbox"></div>
+              <span class="text-4" for="exclude-spaces">Exclude Spaces</span>
+            </button>
+            <button
+              class="check-input"
+              data-checked="false"
+              id="set-character-limit"
+            >
+              <div class="checkbox"></div>
+              <span class="text-4" for="exclude-spaces"
+                >Set Character Limit</span
+              >
+            </button>
+          </div>
+          <p class="text-4">
+            Approx. reading time:
+            <span class="read-time">1</span> minute
+          </p>
+        </div>
+      </div>
+
+      <div class="statistics">
+        <div class="results-box">
+          <div class="stat-box">
+            <img class="shape" src="public/Shape-01.svg" />
+            <p class="results text-1" id="total-chars">278</p>
+            <p class="results-label text-3">Total Characters</p>
+          </div>
+          <div class="stat-box">
+            <img class="shape" src="public/Shape-02.svg" />
+            <p class="results text-1" id="word-count">39</p>
+            <p class="results-label text-3">Word Count</p>
+          </div>
+          <div class="stat-box">
+            <img class="shape" src="public/Shape-03.svg" />
+            <p class="results text-1" id="sentence-count">04</p>
+            <p class="results-label text-3">Sentence Count</p>
+          </div>
+        </div>
+
+        <div class="letter-density-box">
+          <h2 class="text-2">Letter Density</h2>
+          <div class="density-stats">
+            <div class="density-stat">
+              <p class="density-letter text-4">E</p>
+              <div class="density-bar-container">
+                <div class="density-bar"></div>
+              </div>
+              <p class="density-text text-4">40 (16.06%)</p>
+            </div>
+            <div class="density-stat">
+              <p class="density-letter text-4">E</p>
+              <div class="density-bar-container">
+                <div class="density-bar"></div>
+              </div>
+              <p class="density-text text-4">00 (00.00%)</p>
+            </div>
+            <div class="density-stat">
+              <p class="density-letter text-4">E</p>
+              <div class="density-bar-container">
+                <div class="density-bar"></div>
+              </div>
+              <p class="density-text text-4">40 (16.06%)</p>
+            </div>
+          </div>
+          <button class="density-view-btn text-4">
+            See more <span><img src="public/chevron-down.svg" /></span>
+          </button>
+        </div>
+      </div>
     </main>
     <script src="app.js"></script>
   </body>
