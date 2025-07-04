@@ -148,6 +148,11 @@ button {
   margin-bottom: var(--spacing-200);
 }
 
+#user-text-input.error {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 7px var(--orange-500);
+}
+
 #user-text-input::placeholder {
   color: var(--neutral-200);
 }
@@ -180,8 +185,8 @@ button {
   visibility: hidden;
 }
 
-#char-limit-input.active {
-  visibility: visible;
+*.active {
+  visibility: visible !important;
 }
 
 .checkbox:focus,
@@ -306,6 +311,17 @@ button {
 #char-limit-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  color: var(--orange-500);
+  visibility: hidden;
+}
+
+.error-message img {
+  margin-right: var(--spacing-100);
 }
 
 @media (width >= 768px) {

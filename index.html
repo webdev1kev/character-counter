@@ -29,6 +29,10 @@
           id="user-text-input"
           placeholder="Start typing here… (or paste your text)"
         ></textarea>
+        <p class="error-message">
+          <img src="public/info-circle.svg" />Limit reached! Your text exceeds
+          300 characters.
+        </p>
         <div class="toggles-box">
           <div class="check-inputs">
             <div class="check-input">
@@ -85,24 +89,13 @@
               </div>
               <p class="density-text text-4">40 (16.06%)</p>
             </div>
-            <div class="density-stat">
-              <p class="density-letter text-4">E</p>
-              <div class="density-bar-container">
-                <div class="density-bar"></div>
-              </div>
-              <p class="density-text text-4">00 (00.00%)</p>
-            </div>
-            <div class="density-stat">
-              <p class="density-letter text-4">E</p>
-              <div class="density-bar-container">
-                <div class="density-bar"></div>
-              </div>
-              <p class="density-text text-4">40 (16.06%)</p>
-            </div>
           </div>
-          <button class="density-view-btn text-4">
+          <p class="empty-stat-text text-4">
+            No characters found. Start typing to see letter density.
+          </p>
+          <!-- <button class="density-view-btn text-4">
             See more <span><img src="public/chevron-down.svg" /></span>
-          </button>
+          </button> -->
         </div>
       </div>
     </main>
