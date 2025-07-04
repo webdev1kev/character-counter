@@ -167,9 +167,38 @@ button {
   width: 16px;
   height: 16px;
   margin-right: 10px;
+  padding: 1px;
 
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-4);
+
+  display: flex;
+}
+
+.check,
+#char-limit-input {
+  visibility: hidden;
+}
+
+#char-limit-input.active {
+  visibility: visible;
+}
+
+.checkbox:focus,
+.checkbox:hover {
+  outline: 2px solid var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  box-shadow: 0 0 0 4px var(--purple-400);
+  background-color: var(--neutral-0);
+}
+
+.checkbox.checked {
+  background-color: var(--purple-400);
+  border-color: var(--purple-400);
+}
+
+.checkbox.checked .check {
+  visibility: visible;
 }
 
 .statistics {
@@ -260,6 +289,23 @@ button {
 
 .density-view-btn {
   width: max-content;
+}
+
+#char-limit-input {
+  margin-left: 10px;
+  padding: var(--spacing-050) var(--spacing-150);
+  width: 55px;
+  background-color: transparent;
+  border: 1px solid var(--neutral-600);
+  border-radius: var(--radius-6);
+  color: var(--neutral-0);
+  font-family: "DM Sans", sans-serif;
+}
+
+#char-limit-input::-webkit-outer-spin-button,
+#char-limit-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (width >= 768px) {

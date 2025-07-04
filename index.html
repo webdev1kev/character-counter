@@ -31,24 +31,23 @@
         ></textarea>
         <div class="toggles-box">
           <div class="check-inputs">
-            <button
-              class="check-input"
-              data-checked="false"
-              id="exclude-spaces"
-            >
-              <div class="checkbox"></div>
+            <div class="check-input">
+              <button class="checkbox" data-checked="false" id="exclude-spaces">
+                <img class="check" src="public/check.svg" />
+              </button>
               <span class="text-4" for="exclude-spaces">Exclude Spaces</span>
-            </button>
-            <button
+            </div>
+            <div
               class="check-input"
               data-checked="false"
               id="set-character-limit"
             >
-              <div class="checkbox"></div>
+              <button class="checkbox"></button>
               <span class="text-4" for="exclude-spaces"
                 >Set Character Limit</span
               >
-            </button>
+              <input type="number" id="char-limit-input" />
+            </div>
           </div>
           <p class="text-4">
             Approx. reading time:
