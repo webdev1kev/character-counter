@@ -189,6 +189,10 @@ button {
   visibility: visible !important;
 }
 
+.hide {
+  display: none;
+}
+
 .checkbox:focus,
 .checkbox:hover {
   outline: 2px solid var(--neutral-0);
@@ -285,9 +289,14 @@ button {
   border-radius: var(--radius-full);
 }
 
+.density-letter {
+  min-width: 5px;
+  max-width: 5px;
+}
+
 .density-text {
-  min-width: 100px;
-  max-width: 100px;
+  min-width: 85px;
+  max-width: 85px;
   white-space: nowrap;
   text-align: right;
 }
